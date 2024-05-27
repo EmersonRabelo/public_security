@@ -7,25 +7,28 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "ps_alarms")
+@Table(name = "alarms_ps_v2")
 @Getter
 @Setter
 public class Alarm {
     @Id
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "PS_ALARMS_SEQ"
+            generator = "ALARMS_SEQ_PS_V2"
     )
     @SequenceGenerator(
-            name = "PS_ALARMS_SEQ",
-            sequenceName = "PS_ALARMS_SEQ",
+            name = "ALARMS_SEQ_PS_V2",
+            sequenceName = "ALARMS_SEQ_PS_V2",
             allocationSize = 1
     )
     @Column(name = "alarm_id")
-    private Long  alarmId;
+    private Long alarmId;
+
     private String type;
+
+    @Column(name = "status_id")
     private String status;
+
     @Column(name = "dt_alarm")
     private LocalDateTime alarmDate;
-
 }
