@@ -3,7 +3,6 @@ package br.com.fiap.public_security.controller;
 import br.com.fiap.public_security.dto.EmergencyRegisterDto;
 import br.com.fiap.public_security.dto.EmergencyResponseDto;
 import br.com.fiap.public_security.dto.EmergencyUpdateDto;
-import br.com.fiap.public_security.model.Emergency;
 import br.com.fiap.public_security.service.EmergencyService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
