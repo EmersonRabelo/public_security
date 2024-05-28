@@ -26,7 +26,7 @@ public class Alarm {
 
     private String type;
 
-    @Column(name = "status_id")
+    @Column(name = "STATUS_ALARM")
     private String status;
 
     @Column(name = "dt_alarm")
