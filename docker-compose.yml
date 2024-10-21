@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    container_name: public_security  
+    image: "mysql" 
+    ports:
+      - "3306:3306"  
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_pass  
+
+  api:
+    build: .  
+    ports:
+      - "8080:8080"  
+    depends_on:
+      - db 
+    environment:
+      - PROFILE=dev
+      - DATABASE_URL=jdbc:mysql://db:3306/public_security?createDatabaseIfNotExist=true 
+      - DATABASE_USER=root
+      - DATABASE_PWD=root_pass
