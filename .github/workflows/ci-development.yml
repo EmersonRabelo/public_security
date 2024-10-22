@@ -49,3 +49,4 @@ jobs:
       with:
         app-name: my-app # Ensure this matches your Azure Web App name
         images: publicsecurityfiap.azurecr.io/public_security:dev
+
