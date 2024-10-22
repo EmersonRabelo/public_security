@@ -48,5 +48,5 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: my-app # Ensure this matches your Azure Web App name
+        app-name: Microsoft.Web-WebApp-Portal-a22411c0-b9d3
         images: publicsecurityfiap.azurecr.io/public_security:dev
