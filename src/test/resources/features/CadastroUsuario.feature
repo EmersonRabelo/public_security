@@ -9,7 +9,7 @@ Funcionalidade: Cadastrar um usuário
     Dado que eu tenha os seguintes dados de entrega:
       | key       | value                |
       | name      | Emerson Teles Rabelo |
-      | email     | teste2@teste.com     |
+      | email     | teste@teste.com     |
       | password  | Mortadela@4321       |
       | role      | ADMIN                |
     Quando enviar a requisição para o endpoint "user/register" de cadastro de usuários
@@ -21,7 +21,7 @@ Funcionalidade: Cadastrar um usuário
     Dado que eu tenha os seguintes dados de entrega:
       | key       | value                |
       | name      | Emerson Teles Rabelo |
-      | email     | teste2@teste.com     |
+      | email     | teste@teste.com     |
       | password  | Mortadela@3333       |
       | role      | SYS                  |
     Quando enviar a requisição para o endpoint "user/register" de cadastro de usuários
