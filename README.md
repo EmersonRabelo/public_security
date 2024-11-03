@@ -27,7 +27,10 @@ http://localhost:8080/auth/test
 // Testes unitários (validação)
 
 ./mvnw test
+```
 
+## Para os testes de integração:
 
-
-
+```sh
+mvn clean test
+```

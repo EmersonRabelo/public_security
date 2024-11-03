@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
         tags = "@regressivo",
         plugin = {"html:target/cucumber-reports.html"}
 )
-public class TestRunner {
+public class TestRunnerTest {
 }
