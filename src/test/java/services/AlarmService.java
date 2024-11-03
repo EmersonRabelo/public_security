@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.annotations.Expose;
 import com.networknt.schema.JsonSchema;
 import com.networknt.schema.JsonSchemaFactory;
 import com.networknt.schema.SpecVersion;
@@ -12,6 +11,7 @@ import com.networknt.schema.ValidationMessage;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import model.AlarmModel;
+import model.UsuarioModel;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -24,7 +24,7 @@ import java.util.Set;
 
 import static io.restassured.RestAssured.given;
 
-public class CadastroAlarmService {
+public class AlarmService {
 
     AlarmModel model = new AlarmModel();
     public final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
@@ -34,6 +34,7 @@ public class CadastroAlarmService {
     String schemasPath = "src/test/resources/schemas/";
     JSONObject jsonSchema;
     private final ObjectMapper mapper = new ObjectMapper();
+    String AlarmIDDelivery;
     public void setFieldsDelivery(String field, String value) {
         switch (field) {
             case "alarmId" -> model.setAlarmId(Integer.parseInt(value));
@@ -88,9 +89,25 @@ public class CadastroAlarmService {
 
     }
 
+    public void retrieveIdDelivery(){
+        AlarmIDDelivery = String.valueOf(gson.fromJson(response.jsonPath().prettify(), AlarmModel.class).getAlarmId());
+    }
+
     public void restoreLoginToken(String token) {
         this.token = token;
     }
 
+
+    public void deleteDelivery(String endPoint) {
+        String url = String.format("%s%s/%s", baseUrl, endPoint, AlarmIDDelivery);
+        response = given()
+                .accept(ContentType.JSON)
+                .header("Authorization", "Bearer " + this.token) // Adiciona o Bearer Token ao cabeçalho
+                .when()
+                .delete(url)
+                .then()
+                .extract()
+                .response();
+    }
 
 }

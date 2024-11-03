@@ -7,7 +7,7 @@ import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.json.JSONException;
 import org.junit.Assert;
-import services.CadastroAlarmService;
+import services.AlarmService;
 import services.LoginUsuarioService;
 
 import java.io.IOException;
@@ -15,10 +15,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class CadastroAlarmSteps {
+public class AlarmeSteps {
 
     LoginUsuarioService loginService = new LoginUsuarioService();
-    CadastroAlarmService alarmService = new CadastroAlarmService();
+    AlarmService alarmService = new AlarmService();
 
     String token;
 
@@ -78,4 +78,13 @@ public class CadastroAlarmSteps {
         token = "";
     }
 
+    @Dado("que eu recupere o ID do alarme criado no contexto")
+    public void queEuRecupereOIDDoAlarmeCriadoNoContexto() {
+        alarmService.retrieveIdDelivery();
+    }
+
+    @Quando("eu enviar a requisição com o ID para o endpoint {string} de deleção")
+    public void euEnviarARequisiçãoComOIDParaOEndpointDeDeleção(String enpoint) {
+        alarmService.deleteDelivery(enpoint);
+    }
 }
