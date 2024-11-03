@@ -69,7 +69,7 @@ public class AlarmService {
 
     public void setContract(String contract) throws JSONException, IOException {
         switch (contract) {
-            case "Cadastro bem-sucedido de alarme" -> jsonSchema = loadJsonFromFile(schemasPath+"cadastro-bem-sucedido-de-alarm.json");
+            case "Cadastro bem-sucedido de alarme" -> jsonSchema = loadJsonFromFile(schemasPath+"cadastro-bem-sucedido-de-alarme.json");
             default ->throw new IllegalStateException("Unexpected contract" + contract);
         }
     }
