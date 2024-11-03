@@ -9,7 +9,6 @@ import model.EmergenciaModel;
 import static io.restassured.RestAssured.given;
 
 public class CadastroEmergenciaService {
-    LoginUsuarioService loginUsuarioService = new LoginUsuarioService();
     EmergenciaModel emergenciaModel = new EmergenciaModel();
     public final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
     String baseUrl = "http://localhost:8080/";
