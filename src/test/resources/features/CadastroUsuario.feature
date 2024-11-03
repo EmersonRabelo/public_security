@@ -1,4 +1,5 @@
 # language: pt
+@regressivo
 Funcionalidade: Cadastrar um usuário
   Como um novo usuário
   Quero conseguir me registrar na aplicação
@@ -8,7 +9,7 @@ Funcionalidade: Cadastrar um usuário
     Dado que eu tenha os seguintes dados de entrega:
       | key       | value                |
       | name      | Emerson Teles Rabelo |
-      | email     | emerson@abcde.com    |
+      | email     | teste2@teste.com     |
       | password  | Mortadela@4321       |
       | role      | ADMIN                |
     Quando enviar a requisição para o endpoint "user/register" de cadastro de usuários
@@ -20,7 +21,7 @@ Funcionalidade: Cadastrar um usuário
     Dado que eu tenha os seguintes dados de entrega:
       | key       | value                |
       | name      | Emerson Teles Rabelo |
-      | email     | emerson@dfass.com    |
+      | email     | teste2@teste.com     |
       | password  | Mortadela@3333       |
       | role      | SYS                  |
     Quando enviar a requisição para o endpoint "user/register" de cadastro de usuários
@@ -30,7 +31,7 @@ Funcionalidade: Cadastrar um usuário
     Dado que eu tenha os seguintes dados de entrega:
       | key       | value                |
       | name      | Emerson Teles Rabelo |
-      | email     | emerson@abcde.com    |
+      | email     | teste@teste.com      |
       | password  | Mortadela@4321       |
       | role      | ADMIN                |
     Quando enviar a requisição para o endpoint "user/register" de cadastro de usuários

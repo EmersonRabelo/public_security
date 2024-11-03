@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
 Funcionalidade: Deletar um Alarme
   Como usuário autenticado
   Quero registrar deletar um alarme

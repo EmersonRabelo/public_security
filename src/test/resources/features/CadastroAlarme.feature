@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
 Funcionalidade: Criação de Alarme
   Como usuário autenticado
   Quero registrar um novo Alarme

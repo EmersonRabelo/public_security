@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
 Funcionalidade: Criação de Emergência
   Como usuário autenticado
   Quero criar uma nova Emergência

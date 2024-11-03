@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
 Funcionalidade: Deletar uma Emergência
   Como usuário autenticado
   Quero deletar uma Emergência

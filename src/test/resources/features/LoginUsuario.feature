@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
   Funcionalidade: Login de um usuário
     Como usuário cadastrado
     Quero conseguir realizar login na aplicação
