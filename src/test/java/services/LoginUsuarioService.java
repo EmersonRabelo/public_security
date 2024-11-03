@@ -40,7 +40,14 @@ public class LoginUsuarioService {
     }
 
     public String retrieveTokenDelivery() {
-        JsonObject jsonObject = JsonParser.parseString(String.valueOf(response.body().asString())).getAsJsonObject();
-        return jsonObject.get("token").getAsString();
+        String responseBody = response.body().asString();
+        if (responseBody != null && !responseBody.isEmpty()) {
+            JsonObject jsonObject = JsonParser.parseString(responseBody).getAsJsonObject();
+            if (jsonObject.has("token")) {
+                return jsonObject.get("token").getAsString();
+            }
+        }
+        return "";
     }
+
 }
