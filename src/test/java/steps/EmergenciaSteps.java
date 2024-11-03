@@ -5,16 +5,15 @@ import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
-import services.CadastroEmergenciaService;
-import services.CadastroUsuarioService;
+import services.EmergenciaService;
 import services.LoginUsuarioService;
 
 import java.util.List;
 import java.util.Map;
 
-public class CadastroEmergenciaSteps {
+public class EmergenciaSteps {
 
-    CadastroEmergenciaService service = new CadastroEmergenciaService();
+    EmergenciaService service = new EmergenciaService();
     LoginUsuarioService loginService = new LoginUsuarioService();
 
     String token;
