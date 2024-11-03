@@ -1,0 +1,87 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730661092.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "emergencyId",
+    "requesterEmail",
+    "address",
+    "type",
+    "title",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "emergencyId": {
+      "$id": "#root/emergencyId",
+      "title": "Emergencyid",
+      "type": "integer",
+      "examples": [
+        10
+      ],
+      "default": 0
+    },
+    "requesterEmail": {
+      "$id": "#root/requesterEmail",
+      "title": "Requesteremail",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "emerson@abcde.com"
+      ],
+      "pattern": "^.*$"
+    },
+    "address": {
+      "$id": "#root/address",
+      "title": "Address",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "RUA PEDRO RISSATTO, 30 - REMÉDIOS - OSASCO"
+      ],
+      "pattern": "^.*$"
+    },
+    "type": {
+      "$id": "#root/type",
+      "title": "Type",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "agglomeration"
+      ],
+      "pattern": "^.*$"
+    },
+    "title": {
+      "$id": "#root/title",
+      "title": "Title",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Aglomeracao em frente a FATEC-OSASCO"
+      ],
+      "pattern": "^.*$"
+    },
+    "description": {
+      "$id": "#root/description",
+      "title": "Description",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Esta ocorrendo uma aglomeracao em frente a FATEC-Osasco, entre 1000 pessoas."
+      ],
+      "pattern": "^.*$"
+    },
+    "status": {
+      "$id": "#root/status",
+      "title": "Status",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "pending"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}
