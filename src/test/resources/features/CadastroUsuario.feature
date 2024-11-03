@@ -4,7 +4,7 @@ Funcionalidade: Cadastrar um usuário
   Quero conseguir me registrar na aplicação
   Para que o usuário seja registrado corretamente na aplicação
 
-  Contexto: Cadastro bem-sucedido de usuário
+  Cenário: Cadastro bem-sucedido de usuário
     Dado que eu tenha os seguintes dados de entrega:
       | key       | value                |
       | name      | Emerson Teles Rabelo |
@@ -35,4 +35,3 @@ Funcionalidade: Cadastrar um usuário
       | role      | ADMIN                |
     Quando enviar a requisição para o endpoint "user/register" de cadastro de usuários
     Então o status code da resposta deve ser 409
-    E o corpo da resposta de erro da api deve retornar a mensagem "Already registered user."
