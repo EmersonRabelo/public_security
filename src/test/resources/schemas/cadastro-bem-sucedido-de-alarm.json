@@ -1,0 +1,54 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730656322.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "alarmId",
+    "type",
+    "status",
+    "alarmDate"
+  ],
+  "properties": {
+    "alarmId": {
+      "$id": "#root/alarmId",
+      "title": "Alarmid",
+      "type": "integer",
+      "examples": [
+        9
+      ],
+      "default": 0
+    },
+    "type": {
+      "$id": "#root/type",
+      "title": "Type",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "agglomeration"
+      ],
+      "pattern": "^.*$"
+    },
+    "status": {
+      "$id": "#root/status",
+      "title": "Status",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "pending"
+      ],
+      "pattern": "^.*$"
+    },
+    "alarmDate": {
+      "$id": "#root/alarmDate",
+      "title": "Alarmdate",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2024-11-03T13:45:13.6730924"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}
