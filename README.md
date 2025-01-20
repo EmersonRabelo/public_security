@@ -5,6 +5,7 @@
 - **Java Spring**
 - **Docker**
 - **Azure DevOps** para CI/CD
+- **Integration tests**
 
 ## Como Rodar o Projeto Localmente
 
